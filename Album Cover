@@ -49,12 +49,18 @@ def display_cover(top,bottom ):
  import requests
  
  wikipedia_link='https://en.wikipedia.org/wiki/Special:Random'  
+ 
+ # get() used from the requests library to download the Wikipedia page 
  raw_random_wikipedia_page = requests.get(wikipedia_link)
  
+ #Find the XML node <title> and </title>indicating the start and end of the title
  title = page[page.find("<title>"):page.find("</title>")].strip("<title>")
+ 
+ #Get rid of the term - Wikipedia from the title 
  band_title = title1.strip("- Wikipedia")
  print(band_title)
  
+ #Repeat process again for album title
  import requests
  wikipedia_link1='https://en.wikipedia.org/wiki/Tamil Nadu'
  raw_random_wikipedia_page1 = requests.get(wikipedia_link1)
