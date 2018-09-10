@@ -1,4 +1,4 @@
 
 #Python 
 
-Create a random album cover.
+Create a random album cover(Project work) .
